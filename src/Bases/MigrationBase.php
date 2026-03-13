@@ -1,6 +1,6 @@
 <?php
 
-namespace Obelaw\Stack\Bases;
+namespace Obelaw\Ium\Core\Bases;
 
 use Illuminate\Database\Migrations\Migration;
 
@@ -11,7 +11,7 @@ abstract class MigrationBase extends Migration
      *
      * @var string $prefix
      */
-    protected string $prefix = 'os_';
+    protected string $prefix = 'ium_';
 
     /**
      * Table postfix.

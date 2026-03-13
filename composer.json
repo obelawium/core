@@ -1,9 +1,9 @@
 {
-    "name": "obelaw/stack",
-    "description": "Stack Core",
+    "name": "obelaw/ium-core",
+    "description": "IUM Core",
     "autoload": {
         "psr-4": {
-            "Obelaw\\Stack\\": "src/"
+            "Obelaw\\Ium\\Core\\": "src/"
         }
     },
     "authors": [

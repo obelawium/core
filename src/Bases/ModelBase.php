@@ -1,6 +1,6 @@
 <?php
 
-namespace Obelaw\Stack\Bases;
+namespace Obelaw\Ium\Core\Bases;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class ModelBase extends Model
      *
      * @var string $prefix
      */
-    protected string $prefix = 'os_';
+    protected string $prefix = 'ium_';
 
     /**
      * Optional module name for table prefixing.
