@@ -1,0 +1,24 @@
+<?php
+
+namespace Obelaw\Ium\Core\Providers;
+
+use Illuminate\Foundation\Console\AboutCommand;
+use Illuminate\Support\ServiceProvider;
+use Obelaw\Ium\Core\ObelawiumManager;
+
+class ObelawiumServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        $this->app->singleton('obelaw.ium.core', ObelawiumManager::class);
+    }
+
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+
+            AboutCommand::add('Obelawium', fn() => ['Obelawium Core' => '0.1.0']);
+        }
+    }
+}
