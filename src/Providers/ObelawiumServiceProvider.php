@@ -10,7 +10,9 @@ class ObelawiumServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('obelaw.ium.core', ObelawiumManager::class);
+        $this->app->singleton(ObelawiumManager::class, function ($app) {
+            return ObelawiumManager::getInstance();
+        });
     }
 
     public function boot()
